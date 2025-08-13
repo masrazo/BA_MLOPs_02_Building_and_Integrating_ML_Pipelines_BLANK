@@ -21,14 +21,20 @@ jobs:
 
   checkout:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
   setup_python:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [checkout]
     if: ${{ success() }}
     steps:
@@ -39,7 +45,10 @@ jobs:
 
   install_dependencies:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [checkout, setup_python]
     if: ${{ success() }}
     steps:
@@ -49,7 +58,10 @@ jobs:
 
   unit_tests:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [install_dependencies]
     if: ${{ success() }}
     steps:
@@ -61,7 +73,10 @@ jobs:
 
   integration_tests:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
@@ -73,7 +88,10 @@ jobs:
 
   functional_tests:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
@@ -85,7 +103,10 @@ jobs:
 
   e2e_tests:
     runs-on: ubuntu-latest
-    working-directory: "02_Testing_CICD_Churn_ML_Project"
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:

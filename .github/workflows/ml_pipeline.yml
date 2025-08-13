@@ -28,15 +28,15 @@ jobs:
       with:
         python-version: '3.11'
 
-#  install_dependencies:
-#    runs-on: ubuntu-latest
-#    needs: [checkout, setup_python]
-#    if: ${{ success() }}
-#    steps:
-#    - name: Install Dependencies
-#      working-directory: 02_Testing_CICD_Churn_ML_Project
-#      run: |
-#        pip install -r requirements.txt
+  install_dependencies:
+    runs-on: ubuntu-latest
+    needs: [checkout, setup_python]
+    if: ${{ success() }}
+    steps:
+    - name: Install Dependencies
+      working-directory: 02_Testing_CICD_Churn_ML_Project
+      run: |
+        pip install -r requirements.txt
 #
 #  unit_tests:
 #    runs-on: ubuntu-latest

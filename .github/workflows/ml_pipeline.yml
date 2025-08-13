@@ -11,22 +11,24 @@ on:
       - '02_Testing_CICD_Churn_ML_Project/tests/**'
 
 jobs:
-  set_working_dir:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        # Set the working directory to the project root within the repository
-        working-directory: "02_Testing_CICD_Churn_ML_Project"
+#  set_working_dir:
+#    runs-on: ubuntu-latest
+#    steps:
+#    defaults:
+#      run:
+#        # Set the working directory to the project root within the repository
+#        working-directory: "02_Testing_CICD_Churn_ML_Project"
 
   checkout:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
   setup_python:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [checkout]
     if: ${{ success() }}
     steps:
@@ -37,6 +39,7 @@ jobs:
 
   install_dependencies:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [checkout, setup_python]
     if: ${{ success() }}
     steps:
@@ -46,6 +49,7 @@ jobs:
 
   unit_tests:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [install_dependencies]
     if: ${{ success() }}
     steps:
@@ -57,6 +61,7 @@ jobs:
 
   integration_tests:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
@@ -68,6 +73,7 @@ jobs:
 
   functional_tests:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
@@ -79,6 +85,7 @@ jobs:
 
   e2e_tests:
     runs-on: ubuntu-latest
+    working-directory: "02_Testing_CICD_Churn_ML_Project"
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:

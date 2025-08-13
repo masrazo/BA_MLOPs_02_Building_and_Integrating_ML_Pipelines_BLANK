@@ -1,1 +1,2 @@
 # Example
+## GitHub Actions

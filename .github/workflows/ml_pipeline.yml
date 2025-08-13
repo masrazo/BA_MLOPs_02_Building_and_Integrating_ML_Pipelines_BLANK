@@ -6,7 +6,7 @@ on:
     paths:
       - '02_Testing_CICD_Churn_ML_Project/tests/**'
   pull_request:
-    branches: [*]
+    branches: "*"
     paths:
       - '02_Testing_CICD_Churn_ML_Project/tests/**'
 

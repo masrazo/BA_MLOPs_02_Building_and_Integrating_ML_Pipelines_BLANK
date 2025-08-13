@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
+        shell: bash
         # Set the working directory to the project root within the repository
         working-directory: "02_Testing_CICD_Churn_ML_Project"
 

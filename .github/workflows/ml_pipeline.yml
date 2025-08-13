@@ -23,7 +23,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Repository
-      working-directory: 02_Testing_CICD_Churn_ML_Project
       uses: actions/checkout@v3
 
   setup_python:
@@ -32,7 +31,6 @@ jobs:
     if: ${{ success() }}
     steps:
     - name: Set up Python 3.11
-      working-directory: 02_Testing_CICD_Churn_ML_Project
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'

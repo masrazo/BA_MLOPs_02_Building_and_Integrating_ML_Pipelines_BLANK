@@ -21,51 +21,39 @@ jobs:
 
   checkout:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     steps:
     - name: Checkout Repository
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       uses: actions/checkout@v3
 
   setup_python:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [checkout]
     if: ${{ success() }}
     steps:
     - name: Set up Python 3.11
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
 
   install_dependencies:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [checkout, setup_python]
     if: ${{ success() }}
     steps:
     - name: Install Dependencies
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       run: |
         pip install -r requirements.txt
 
   unit_tests:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [install_dependencies]
     if: ${{ success() }}
     steps:
     - name: Run Unit Tests
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       run: |
         # Run unit tests
         # Assumes pure unit tests are in 'tests/unit/'
@@ -73,14 +61,11 @@ jobs:
 
   integration_tests:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
     - name: Run Integration Tests
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       run: |
         # Run integration tests
         # Assumes integration tests are in 'tests/integration/' and end with '_integration.py'
@@ -88,14 +73,11 @@ jobs:
 
   functional_tests:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
     - name: Run Functional Tests
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       run: |
         # Run functional tests
         # Assumes functional tests are in 'tests/functional/'
@@ -103,14 +85,11 @@ jobs:
 
   e2e_tests:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./scripts
     needs: [ install_dependencies ]
     if: ${{ success() }}
     steps:
     - name: Run E2E Tests
+      working-directory: 02_Testing_CICD_Churn_ML_Project
       run: |
         # Run E2E tests
         # Assumes E2E tests are in 'tests/e2e/' and are named e.g., 'e2e_test.py'

@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/850381466924108140/511d6bb3bfc14d86840bc41442baac3e/artifacts
+end_time: 1755095324634
+entry_point_name: ''
+experiment_id: '850381466924108140'
+lifecycle_stage: active
+run_id: 511d6bb3bfc14d86840bc41442baac3e
+run_name: Decision_Tree_Trial_Simplified_Data
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755095316188
+status: 3
+tags: []
+user_id: MiguelAngelSanchezRa

@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/360390358721640468/models/m-960b6b574ccc4bef975b2c079063e1a9/artifacts
+creation_timestamp: 1755095513092
+experiment_id: '360390358721640468'
+last_updated_timestamp: 1755095520470
+model_id: m-960b6b574ccc4bef975b2c079063e1a9
+model_type: null
+name: decision_tree_model
+source_run_id: e705797596704fd78afd89a6e5bd913a
+status: 2
+status_message: null

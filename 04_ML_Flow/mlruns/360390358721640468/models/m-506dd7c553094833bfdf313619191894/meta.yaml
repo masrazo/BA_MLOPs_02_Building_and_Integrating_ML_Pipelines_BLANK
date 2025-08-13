@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/360390358721640468/models/m-506dd7c553094833bfdf313619191894/artifacts
+creation_timestamp: 1755095497953
+experiment_id: '360390358721640468'
+last_updated_timestamp: 1755095505478
+model_id: m-506dd7c553094833bfdf313619191894
+model_type: null
+name: knn_model
+source_run_id: 36411a9a6e7f4577b3f367f0393eeb7d
+status: 2
+status_message: null

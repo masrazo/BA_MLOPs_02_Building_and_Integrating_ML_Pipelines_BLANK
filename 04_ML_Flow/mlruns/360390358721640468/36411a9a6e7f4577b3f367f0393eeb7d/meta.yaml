@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/360390358721640468/36411a9a6e7f4577b3f367f0393eeb7d/artifacts
+end_time: 1755095505524
+entry_point_name: ''
+experiment_id: '360390358721640468'
+lifecycle_stage: active
+run_id: 36411a9a6e7f4577b3f367f0393eeb7d
+run_name: KNN Classifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755095497625
+status: 3
+tags: []
+user_id: MiguelAngelSanchezRa

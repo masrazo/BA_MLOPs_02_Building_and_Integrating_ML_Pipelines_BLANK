@@ -1,0 +1,14 @@
+artifact_uri: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/360390358721640468/e705797596704fd78afd89a6e5bd913a/artifacts
+end_time: 1755095520509
+entry_point_name: ''
+experiment_id: '360390358721640468'
+lifecycle_stage: active
+run_id: e705797596704fd78afd89a6e5bd913a
+run_name: Decision Tree Classifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1755095512716
+status: 3
+tags: []
+user_id: MiguelAngelSanchezRa

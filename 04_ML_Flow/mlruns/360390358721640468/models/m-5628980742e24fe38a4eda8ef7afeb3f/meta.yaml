@@ -1,0 +1,10 @@
+artifact_location: file:///c:/Users/MiguelAngelSanchezRa/Python%20Sandbox/Corporate%20training/BA_MLOPs_02_Building_and_Integrating_ML_Pipelines_BLANK/04_ML_Flow/mlruns/360390358721640468/models/m-5628980742e24fe38a4eda8ef7afeb3f/artifacts
+creation_timestamp: 1755095505932
+experiment_id: '360390358721640468'
+last_updated_timestamp: 1755095512674
+model_id: m-5628980742e24fe38a4eda8ef7afeb3f
+model_type: null
+name: svm_model
+source_run_id: baebd2adee984bd0ad50e9e77bf76088
+status: 2
+status_message: null
